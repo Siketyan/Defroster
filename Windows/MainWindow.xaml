@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:loaders="clr-namespace:Loaders;assembly=MrMitch.Loaders"
         mc:Ignorable="d"
-        Title="Defroster" Width="415" Height="175" SizeToContent="Height"
+        Title="Defroster" Width="415" Height="153" SizeToContent="Height"
         BorderBrush="DodgerBlue" BorderThickness="1"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <WindowChrome.WindowChrome>
@@ -20,19 +20,14 @@
                 <Button Margin="0,0,0,5" Width="80" Height="24">Cancel</Button>
             </DockPanel>
             <DockPanel>
-                <loaders:ChromeLoader Width="48" Height="48" Margin="10,0,15,0" />
+                <loaders:ChromeLoader Width="32" Height="32" Margin="10,0,15,0" />
                 <StackPanel>
                     <DockPanel>
                         <Label Padding="5,5,0,5">Defrosting archive:</Label>
                         <Label x:Name="pathArchive" />
                     </DockPanel>
-                    <ProgressBar x:Name="progressArchive" Margin="0,0,0,10" Value="50" />
-
-                    <DockPanel>
-                        <Label Padding="5,5,0,5">Defrosting file:</Label>
-                        <Label x:Name="pathFile" />
-                    </DockPanel>
-                    <ProgressBar x:Name="progressFile" Margin="0,0,0,10" Value="50" />
+                    <ProgressBar x:Name="progressArchive" Value="50" />
+                    <Label x:Name="pathFile">folder\file.vvv</Label>
                 </StackPanel>
             </DockPanel>
         </DockPanel>
