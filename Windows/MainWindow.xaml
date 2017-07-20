@@ -3,5 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:loaders="clr-namespace:Loaders;assembly=MrMitch.Loaders"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" />
+        Title="Defroster" Width="415" Height="175" SizeToContent="Height"
+        BorderBrush="DodgerBlue" BorderThickness="1"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="32" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+    <Grid x:Name="layoutRoot">
+        <DockPanel Margin="10,5">
+            <DockPanel DockPanel.Dock="Top">
+                <Label>Defroster</Label>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <Button Margin="0,0,0,5" Width="80" Height="24">Cancel</Button>
+            </DockPanel>
+            <DockPanel>
+                <loaders:ChromeLoader Width="48" Height="48" Margin="10,0,15,0" />
+                <StackPanel>
+                    <DockPanel>
+                        <Label Padding="5,5,0,5">Defrosting archive:</Label>
+                        <Label x:Name="pathArchive" />
+                    </DockPanel>
+                    <ProgressBar x:Name="progressArchive" Margin="0,0,0,10" Value="50" />
+
+                    <DockPanel>
+                        <Label Padding="5,5,0,5">Defrosting file:</Label>
+                        <Label x:Name="pathFile" />
+                    </DockPanel>
+                    <ProgressBar x:Name="progressFile" Margin="0,0,0,10" Value="50" />
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
