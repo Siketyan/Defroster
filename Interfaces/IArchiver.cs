@@ -9,6 +9,6 @@ namespace Defroster.Interfaces
 
         event EventHandler<int> ProgressChanged;
 
-        void Defrost(string path);
+        void Defrost(string src, string dest);
     }
 }
